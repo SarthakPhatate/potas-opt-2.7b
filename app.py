@@ -8,11 +8,11 @@ app = Potassium("my_app")
 @app.init
 def init():
     tokenizer = AutoTokenizer.from_pretrained(
-        "daryl149/Llama-2-7b-chat-hf",
+        "facebook/opt-2.7b",
         use_cache="cache"
     )
     model = AutoModelForCausalLM.from_pretrained(
-        "daryl149/Llama-2-7b-chat-hf",
+        "facebook/opt-2.7b",
         torch_dtype=torch.bfloat16,
         low_cpu_mem_usage=True,
         use_cache="cache"
